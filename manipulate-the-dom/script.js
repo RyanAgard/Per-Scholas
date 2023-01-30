@@ -59,18 +59,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
  }
  click()
   // Part 9
-     const  list=document.getElementsByClassName("blog-post purple")
-      document.getElementsByClassName(list).addEventListener('mouseOut',MouseEvent);
-      document.querySelectorAll(list).addEventListener('mouseEnter',MouseEvent); 
- function MouseEvent(){
- 
-}
- MouseEvent()
-list.forEach((lists)=>{
-          list.classList.toggle('.red')
-          list.classList.toggle('.purple')
+     const list=document.querySelector("blog-post")
+      document.querySelectorAll(list).addEventListener('mouseout',MouseEvent());
+      document.querySelectorAll(list).addEventListener('mouseenter',MouseEvent());
+ function MouseEvent(){ 
+  list.forEach(lists => {
+       lists.classlist.toggle('red')
+       lists.classlist.toggle('purple')
  })
+  
+ 
 
 }
-
+MouseEvent()
+}
 );
