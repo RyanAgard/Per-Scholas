@@ -68,8 +68,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
        lists.classlist.toggle('purple')
  })
   
- 
-
 }
 MouseEvent()
 }
