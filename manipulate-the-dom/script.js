@@ -17,58 +17,61 @@ document.addEventListener("DOMContentLoaded", function(event) {
   // Do all of your work inside the document.addEventListener  
 
   // Part 1
-  document.getElementById("main-title").textContent="Dom Here welcome to my web page";
+   document.getElementById("main-title").textContent="Dom Here welcome to my web page";
   // Part 2
-  document.querySelector('body').style.backgroundColor='blue';
+   document.querySelector('body').style.backgroundColor='blue';
   // Part 3
-  const remove = document.querySelector("li:last-child")
-  remove.parentElement.removeChild(remove)
+   const remove = document.querySelector("li:last-child")
+   remove.parentElement.removeChild(remove)
   // Part 5
- const titles = document.querySelectorAll('.special-title')
- titles.forEach((title)=>{
- title.style.fontSize = "2rem"
+   const titles = document.querySelectorAll('.special-title')
+   titles.forEach((title)=>{
+   title.style.fontSize = "2rem"
  })
   // Part 6
    function NewYork() {
-    var x = document.createElement("li");
-    var t = document.createTextNode("NewYork");
-    x.appendChild(t);
-    document.getElementById("past-races").appendChild(x);
+   var x = document.createElement("li");
+   var t = document.createTextNode("NewYork");
+   x.appendChild(t);
+   document.getElementById("past-races").appendChild(x);
    }
     NewYork()
     // Part 7
    function blogPost(){
-    const  blog = document.querySelector(".main")
-    const div = document.createElement("div"); 
-    blog.appendChild(div);
-    div.classList.add("blog-post") 
-    const h1 = document.createElement('h1') 
-    h1.innerHTML= "New York" ;
-    const p = document.createElement('p');
-    p.innerHTML= "THE BIG RAT FREEWAY GRANDPRIX"
-    div.appendChild(h1);
-    div.appendChild(p);
-    div.style.backgroundColor= 'rebeccapurple'
+   const  blog = document.querySelector(".main")
+   const div = document.createElement("div"); 
+   blog.appendChild(div);
+   div.classList.add("blog-post") 
+   const h1 = document.createElement('h1') 
+   h1.innerHTML= "New York" ;
+   const p = document.createElement('p');
+   p.innerHTML= "THE BIG RAT FREEWAY GRANDPRIX"
+   div.appendChild(h1);
+   div.appendChild(p);
+   div.style.backgroundColor= 'rebeccapurple'
   //  console.dir(div)
  }
- blogPost()
+   blogPost()
   // Part 8
- function click(){
- const button=document.querySelector("#quote-title")
- button.addEventListener("click",randomQuote);
- }
+   function click(){
+   const button=document.querySelector("#quote-title")
+   button.addEventListener("click",randomQuote);
+   }
  click()
   // Part 9
-     const list=document.querySelector("blog-post")
-      document.querySelectorAll(list).addEventListener('mouseout',MouseEvent());
-      document.querySelectorAll(list).addEventListener('mouseenter',MouseEvent());
- function MouseEvent(){ 
-  list.forEach(lists => {
-       lists.classlist.toggle('red')
-       lists.classlist.toggle('purple')
+   const list=document.querySelectorAll(".blog-post.purple")
+   console.log(list)
+   list.forEach(item=>{
+   item.addEventListener('mouseout',MouseEvent);
+   item.addEventListener('mouseenter',MouseEvent);
+   console.log(item)
+   })
+   function MouseEvent(evt){ 
+   list.forEach(lists => {
+   evt.target.classList.toggle('purple')
+   evt.target.classList.toggle('red')
+   
  })
   
-}
-MouseEvent()
-}
-);
+ }
+});
