@@ -111,12 +111,11 @@ grid.appendChild(ball)
 //ballMovement
 function moveBall(){
 ballCurrentPosition[0] +=xDirection
-ballCurrentPosition[1] += yDirection
+ballCurrentPosition[1] +=yDirection
  Ballrelocate()
  checkForWall()
 }
 timerId=setInterval(moveBall,30)
-
 
 function checkForWall(){
   // check for block collisions
@@ -130,15 +129,15 @@ function checkForWall(){
     blocks.splice(i, 1)
     changeDirection()
     score++
-    scoreDisplay.innerHTMl= score
+    scoreDisplay.innerHTML= score
+    }
  //check for win
     if (blocks.length===0){
       scoreDisplay.innerHTML='YOU WIN'
       clearInterval(timerId)
-      document.removeEventListener('keydown',moveMent)
-     }
-  }
-} 
+      document.removeEventListener('keydown',moveMent) 
+      }  
+   }
   //  check for wall collisions
   if (ballCurrentPosition[0] >= (boardWidth - ballDiameter) || 
       ballCurrentPosition[1] >= (boardHeight - ballDiameter) ||
