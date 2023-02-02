@@ -1,12 +1,13 @@
 const grid = document.querySelector(".grid")
 const scoreDisplay = document.querySelector('#score')
+
 const blockwidth = 100
 const blockheight = 20
-const boardWidth = 560
-const boardHeight =300
+const boardWidth = 1100
+const boardHeight =500
 const ballDiameter = 20
 let timerId 
-let xDirection = 2
+let xDirection = -2
 let yDirection = 2
 let score = 0
 
@@ -16,9 +17,6 @@ let currentPosition = userStart
 
 const ballStart = [270,40]
 let ballCurrentPosition = ballStart
-
-
-
 
 
 //block maker 
@@ -32,23 +30,37 @@ class Block {
    }
  }
 
-const blocks = [new Block (10,270),
-                new Block (120,270),
-                new Block (230,270),
-                new Block (340,270),
-                new Block (450,270),
-                new Block (10,240),
-                new Block (120,240),
-                new Block (230,240),
-                new Block (340,240),
-                new Block (450,240),
-                new Block (10,210),
-                new Block (120,210),
-                new Block (230,210),
-                new Block (340,210),
-                new Block (450,210),
-]
-
+const blocks = [new Block (10,470),
+                new Block (120,470),
+                new Block (230,470),
+                new Block (340,470),
+                new Block (450,470),
+                new Block (10,440),
+                new Block (120,440),
+                new Block (230,440),
+                new Block (340,440),
+                new Block (450,440),
+                new Block (10,410),
+                new Block (120,410),
+                new Block (230,410),
+                new Block (340,410),
+                new Block (450,410),
+                new Block (560,470),
+                new Block (560,440),
+                new Block (560,410),
+                new Block (670,470),
+                new Block (670,440),
+                new Block (670,410),
+                new Block (780,470),
+                new Block (780,440),
+                new Block (780,410),
+                new Block (890,470),
+                new Block (890,440),
+                new Block (890,410),
+                new Block (1000,470),
+                new Block (1000,440),
+                new Block (1000,410),
+              ]
 //console.log(blocks[0])
 
 function moreBlocks(){
@@ -115,7 +127,7 @@ ballCurrentPosition[1] +=yDirection
  Ballrelocate()
  checkForWall()
 }
-timerId=setInterval(moveBall,30)
+timerId=setInterval(moveBall,20)
 
 function checkForWall(){
   // check for block collisions
@@ -178,5 +190,12 @@ function checkForWall(){
      if(xDirection === -2 && yDirection === 2){
        xDirection = 2
       return
-     }
+  }
  }
+function startButton(){
+ const start = document.querySelector('.startButton')
+ start.addEventListener('click',function(){
+
+ });
+}
+startButton()

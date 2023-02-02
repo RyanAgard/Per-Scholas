@@ -1,23 +1,27 @@
 .grid{
     position: absolute;
-    width:560px ;
-    height:300px;
+    width:1110px ;
+    height:500px;
+    background-color: black;
     border: solid black 1px;
-    margin-top: 80px;
+    margin-top: 80px; 
+    margin-left: 100vh;
 }
 .block{
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: blue;
+    background-color: rgb(255, 196, 0);
+    
 }
 .user{
     position: absolute;
     width: 100px;
     height: 20px;
-    background-color: purple ;
+    background-color: rgb(252, 10, 252) ;
 }
 .ball{
+   
     position: absolute;
     width: 20px;
     height: 20px;
