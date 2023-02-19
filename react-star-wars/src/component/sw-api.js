@@ -1,29 +1,21 @@
 import { useState } from "react";
- 
-function starShipinfo({getMovie}) {
 
- let [input,setinput]= useState('')
+export async function getData() {
+  let url = `https://swapi.dev/api/starships`;
+  let response = await fetch(url);
+  let ships = await response.json();
+  return ships;
+}
 
- function handleChange(e){
+function Swapi() {
+  let [ship, setShip] = useState(null);
 
-  setinput(e.target.value)
- }
-
- function handleSubmit(e){
-     e.preventDefault()
-    console.log(input)
-    getMovie(input)
- }
-
-    return (
-      <div>
-              <form onSubmit={handleSubmit}> 
-                 <button value = {input} onChange ={handleChange}/>
-                 <button> search </button>
-
-             </form>
-      </div>
-    );
+  async function fetchShipData() {
+    let ships = await getData();
+    setShip(ships);
   }
-  
-  export default starShipinfo;
+
+  return ship;
+}
+
+export default Swapi;

@@ -1,20 +1,12 @@
-import { useState } from "react";
+
+import StarShipsCard from "./component/StarshipCard";
 
 function App() {
 
-  let[starShip,setstarShip]=useState({})
-
-function getStarShip(){
-
-
-
-}
-
-
-
   return (
     <div className="App">
-  
+  <h2 className ="h2" >Star Wars Starships</h2>
+  <StarShipsCard/>
     </div>
   );
 }
