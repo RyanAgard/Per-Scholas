@@ -14,9 +14,7 @@ return(<>
  <div className = 'studentlist1'key={data.id}>
     <div>
       <h1>{data.name}</h1>   
-      <p>{data.bio}</p>
-        <div className = 'StudentData2'>
-   </div>     
+      <p>{data.bio}</p>   
     </div>
    
     </div>
